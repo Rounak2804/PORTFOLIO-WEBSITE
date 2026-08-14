@@ -12,3 +12,54 @@
     height: 280px;
   }
 }
+
+/* Infrastructure monitoring project card */
+.infra { background:#1b3035; padding:27px 30px 0; }
+.infra-body { height:calc(100% - 30px); padding:23px 28px; background:#112326; color:#e9f0e7; }
+.dashboard-head { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; }
+.dashboard-head small, .metric-row small { font:9px var(--mono); letter-spacing:.06em; color:#8aa79d; }
+.dashboard-head h4 { font-size:25px; line-height:.95; letter-spacing:-.08em; margin:7px 0 0; }
+.status { border:1px solid #7eb59d55; padding:7px 9px; color:#b9d7bc; font:8px var(--mono); white-space:nowrap; }
+.status b { display:inline-block; width:5px; height:5px; border-radius:50%; background:#a5ef54; margin-right:5px; }
+.metric-row { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:22px; }
+.metric-row > div { height:90px; padding:12px; background:#193438; border:1px solid #2c4c4e; position:relative; overflow:hidden; }
+.metric-row strong { display:block; font-size:24px; letter-spacing:-.07em; margin-top:6px; }
+.metric-row sup { font-size:10px; color:#9eb8ae; }
+.chart { position:absolute; left:12px; right:12px; bottom:10px; height:21px; background:linear-gradient(135deg,transparent 0 14%,#b4f766 15% 18%,transparent 19% 34%,#b4f766 35% 38%,transparent 39% 51%,#b4f766 52% 55%,transparent 56% 70%,#b4f766 71% 74%,transparent 75%); }
+.chart-two { background:repeating-linear-gradient(90deg,#6bc9d1 0 6px,transparent 6px 10px); height:13px; }
+.chart-three { background:linear-gradient(90deg,#ffb265 0 31%,#ef7059 31% 57%,#87cf7e 57%); }
+.ai-insight { display:flex; gap:11px; margin-top:14px; padding:11px; background:#213e3e; border-left:2px solid #c9fa58; font:9px/1.5 var(--mono); color:#b8ceca; }
+.ai-insight span { color:#1d3022; background:#c9fa58; width:22px; height:22px; display:grid; place-items:center; font-weight:700; }
+.ai-insight p { margin:0; }
+.ai-insight b { color:#f1f5ef; }
+
+/* Small interactive details */
+.project-featured { transition:transform .35s ease; }
+.project-featured:hover { transform:translateY(-7px); }
+.project-featured .project-visual { transition:box-shadow .35s ease, transform .35s ease; }
+.project-featured:hover .project-visual { box-shadow:0 16px 32px #00000035; }
+.project-info h3 { display:inline-block; position:relative; transition:color .25s ease; }
+.project-info h3::after { content:""; position:absolute; left:0; bottom:-5px; width:100%; height:2px; background:#c9fa58; transform:scaleX(0); transform-origin:left; transition:transform .28s ease; }
+.project-featured:hover .project-info h3 { color:#c9fa58; }
+.project-featured:hover .project-info h3::after { transform:scaleX(1); }
+.tags span { transition:background-color .22s ease, border-color .22s ease, color .22s ease, transform .22s ease; }
+.tags span:hover { background:#c9fa58; border-color:#c9fa58; color:#182021; transform:translateY(-2px); }
+.metric-row > div { transition:transform .25s ease, border-color .25s ease, background-color .25s ease; }
+.metric-row > div:hover { transform:translateY(-4px); border-color:#c9fa58; background:#214246; }
+.ai-insight { transition:transform .25s ease, background-color .25s ease; }
+.project-featured:hover .ai-insight { transform:translateX(4px); background:#284a49; }
+.browser-bar span { transition:color .25s ease; }
+.project-featured:hover .browser-bar span { color:#548c3a; }
+
+@media (max-width: 760px) {
+  .infra { padding:22px 20px 0; }
+  .infra-body { padding:18px; }
+  .dashboard-head h4 { font-size:21px; }
+  .status { display:none; }
+  .metric-row { gap:6px; }
+  .metric-row > div { padding:9px; }
+  .metric-row small { font-size:7px; }
+  .ai-insight { margin-top:10px; padding:8px; font-size:8px; }
+  .project-featured:hover { transform:none; }
+  .metric-row > div:hover { transform:none; }
+}
