@@ -15,3 +15,8 @@
 .work{position:relative;background:var(--lavender);color:var(--ink)}.work:before{content:"";position:absolute;right:0;top:0;width:34vw;height:100%;background:var(--mint)}.work .wrap{position:relative}.work h2{color:var(--ink)}.work-heading p,.project-info p:not(.project-number){color:#576172}.project-number{color:var(--blue)}.tags span{color:var(--ink);border-color:#5d60775c;background:#ffffff73}.project-featured:hover .project-info h3{color:var(--blue)}.project-info h3::after{background:var(--blue)}
 .profiles a:hover{background:#e7defb}.hackerrank-profile{background:#e7defb}.contact{position:relative;overflow:hidden;background:var(--yellow)}.contact:after{content:"";position:absolute;width:500px;height:500px;right:-190px;bottom:-230px;border:1px solid #1e24404d;border-radius:50%}.contact-inner{position:relative;z-index:1}.contact-bottom{border-color:#b99e34}
 @media(max-width:760px){.hero-art{height:350px;box-shadow:6px 6px 0 var(--blue)}.hero-art:before{width:410px;height:410px;right:-145px;top:-120px}.orb{width:170px;height:170px;right:48px;top:70px}.work:before{top:auto;bottom:0;width:100%;height:30%}}
+
+
+
+
+/* hey */
