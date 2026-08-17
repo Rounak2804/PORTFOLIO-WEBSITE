@@ -1,82 +1,869 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rounak Raj - Computer Science student, Java developer, and competitive programmer.">
-  <title>Rounak Raj | Portfolio</title>
+  <title>Rounak Raj — Software Developer & CS Student</title>
+  <meta name="description" content="Portfolio of Rounak Raj - Computer Science student, Java developer, and competitive programmer specializing in data structures, algorithms, and modern web development.">
+  <meta name="keywords" content="Rounak Raj, Software Developer, Java, DSA, Web Development, Portfolio, Parul University, LeetCode">
+  <meta name="author" content="Rounak Raj">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Rounak Raj — Software Developer & CS Student">
+  <meta property="og:description" content="Portfolio of Rounak Raj - Computer Science student, Java developer, and competitive programmer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rounak2804.github.io/PORTFOLIO-WEBSITE/">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="updates.css">
-  <link rel="stylesheet" href="certificates.css">
-  <link rel="stylesheet" href="profiles.css">
 </head>
-<body>
-  <div class="noise"></div>
-  <header class="nav wrap">
-    <a class="brand" href="#home" aria-label="Rounak Raj home">RR<span>.</span></a>
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
-    <nav aria-label="Main navigation">
-      <a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
-    </nav>
-    <a class="nav-cta" href="Rounak_Raj_Professional_Resume.pdf" download>Resume <span>↗</span></a>
+<body class="bg-canvas text-primary">
+  <!-- Subtle Background Grid & Glows -->
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+  <div class="glow-orb glow-top-left" aria-hidden="true"></div>
+  <div class="glow-orb glow-bottom-right" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner wrap">
+      <a href="#home" class="brand-logo" aria-label="Rounak Raj Homepage">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">Rounak<span>.dev</span></span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#achievements" class="nav-link">Stats</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="Rounak_Raj_Professional_Resume.pdf" class="btn btn-outline btn-sm resume-btn" download aria-label="Download Resume">
+          <span>Resume</span>
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+      <div class="mobile-nav-inner">
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#achievements" class="mobile-nav-link">Stats & Achievements</a>
+        <a href="#education" class="mobile-nav-link">Education & Credentials</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <a href="Rounak_Raj_Professional_Resume.pdf" class="btn btn-primary mobile-resume" download>
+          <span>Download Resume (PDF)</span>
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="hero wrap" id="home">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><i></i> Available for internship opportunities</p>
-        <h1>Building digital<br>things with <em>intent.</em></h1>
-        <p class="intro">I'm Rounak Raj, a Computer Science student and competitive programmer who enjoys turning thoughtful ideas into clean, responsive web experiences.</p>
-        <div class="hero-actions"><a class="button primary" href="#work">Explore my work <span>↓</span></a><a class="button text-button" href="#contact">Let's talk <span>→</span></a></div>
-      </div>
-      <div class="hero-art reveal delay-1" aria-hidden="true">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orb"></div>
-        <div class="code-card"><span class="comment">// curious by default</span><span><b>const</b> developer = {</span><span>&nbsp;&nbsp;name: <strong>'Rounak'</strong>,</span><span>&nbsp;&nbsp;craft: <strong>'web'</strong></span><span>};</span></div>
-        <p class="art-label">01 / 04 &nbsp; <span>HELLO, WORLD</span></p>
-      </div>
-      <div class="scroll-note"><span></span> Scroll to discover</div>
-    </section>
+    <!-- HERO SECTION -->
+    <section class="hero-section wrap" id="home">
+      <div class="hero-content reveal">
+        <!-- Availability Pill -->
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span>Available for SDE Internships &amp; Roles</span>
+        </div>
 
-    <section class="about section wrap" id="about">
-      <div class="section-label reveal"><span>01</span> About me</div>
-      <div class="about-grid">
-        <h2 class="reveal">A problem solver with an eye for the <em>details.</em></h2>
-        <div class="about-copy reveal delay-1"><p>Currently pursuing a B.Tech in Computer Science at Parul Institute of Technology, I combine strong foundations in Java and data structures with a practical interest in user-friendly frontend development.</p><p>I enjoy the point where a tricky algorithm and a polished interface meet - making software both capable and enjoyable to use.</p><a class="inline-link" href="Rounak_Raj_Professional_Resume.pdf" download>Download full résumé <span>↓</span></a></div>
-      </div>
-      <div class="stats reveal"><div><strong>265</strong><span>LeetCode problems</span></div><div><strong>120</strong><span>CodeChef problems</span></div><div><strong>61</strong><span>GFG problems</span></div><div><strong>209</strong><span>Active coding days</span></div></div>
-    </section>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Rounak</span>.
+        </h1>
 
-    <section class="work section" id="work">
-      <div class="wrap"><div class="section-label light reveal"><span>02</span> Selected work</div><div class="work-heading"><h2 class="reveal">Things I've made.</h2><p class="reveal delay-1">A selection of projects where I focused on a straightforward, responsive experience.</p></div>
-        <div class="projects projects-single">
-          <article class="project project-featured reveal"><div class="project-visual infra"><div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span>infrawatch / live monitoring</span></div><div class="infra-body"><div class="dashboard-head"><div><small>INFRAWATCH AI</small><h4>Infrastructure<br>overview</h4></div><span class="status"><b></b> All systems operational</span></div><div class="metric-row"><div><small>CPU USAGE</small><strong>42<sup>%</sup></strong><i class="chart chart-one"></i></div><div><small>ACTIVE NODES</small><strong>24</strong><i class="chart chart-two"></i></div><div><small>ALERTS</small><strong>03</strong><i class="chart chart-three"></i></div></div><div class="ai-insight"><span>AI</span><p><b>Monitoring insight</b> &mdash; Latency anomaly detected in API cluster. Recommended scaling: +2 nodes.</p></div></div></div></div><div class="project-info"><div><p class="project-number">01 / HACKATHON GROUP PROJECT</p><h3>InfraWatch AI</h3><p>An AI-powered infrastructure monitoring dashboard that tracks system health, detects anomalies, and delivers actionable alerts in real time.</p></div><div class="tags"><span>React</span><span>TypeScript</span><span>Vite</span><span>AI Monitoring</span></div></div></article>
+        <h2 class="hero-subtitle">
+          Computer Science Student &amp; Software Developer
+        </h2>
+
+        <p class="hero-intro">
+          I build high-performance software with strong foundations in <strong class="text-highlight">Java</strong>, <strong class="text-highlight">Data Structures &amp; Algorithms</strong>, and modern <strong class="text-highlight">Web Technologies</strong>. Passionate about solving complex problems and turning thoughtful ideas into clean, reliable applications.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+          </a>
+          <a href="Rounak_Raj_Professional_Resume.pdf" class="btn btn-secondary" download>
+            <span>Download Resume</span>
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+        </div>
+
+        <!-- Social Quick Links -->
+        <div class="hero-socials">
+          <span class="social-label">Connect:</span>
+          <div class="social-links">
+            <a href="https://github.com/Rounak2804" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile" title="GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/rounak-raj-75b8b7328" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://leetcode.com/u/Rounak2802/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LeetCode Profile" title="LeetCode (265+ Solved)">
+              <img src="leetcode-icon.png" alt="LeetCode" class="social-icon-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+              <span style="display:none; font-weight:700; font-family:var(--font-mono); font-size:12px; color:#ffa116;">LC</span>
+            </a>
+            <a href="https://www.codechef.com/users/rounak2802" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="CodeChef Profile" title="CodeChef (120+ Solved)">
+              <img src="codechef-icon.png" alt="CodeChef" class="social-icon-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+              <span style="display:none; font-weight:700; font-family:var(--font-mono); font-size:12px; color:#ffffff;">CC</span>
+            </a>
+            <a href="mailto:rounak00003@gmail.com" class="social-btn" aria-label="Email Rounak" title="Email: rounak00003@gmail.com">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Code/Terminal Graphic (Right Side) -->
+      <div class="hero-visual reveal delay-1">
+        <div class="terminal-card spotlight-card">
+          <!-- Terminal Header with Tabs -->
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="terminal-tabs">
+              <button class="tab-btn active" data-tab="java" id="tab-btn-java">Developer.java</button>
+              <button class="tab-btn" data-tab="ts" id="tab-btn-ts">skills.config.ts</button>
+            </div>
+            <span class="terminal-badge">UTF-8</span>
+          </div>
+
+          <!-- Code Tab 1: Java -->
+          <div class="code-body active" id="tab-java">
+            <pre><code><span class="c-keyword">public class</span> <span class="c-class">SoftwareEngineer</span> {
+  <span class="c-keyword">private final</span> String name = <span class="c-string">"Rounak Raj"</span>;
+  <span class="c-keyword">private final</span> String focus = <span class="c-string">"DSA &amp; Web Systems"</span>;
+  <span class="c-keyword">private</span> <span class="c-type">boolean</span> readyToInnovate = <span class="c-boolean">true</span>;
+
+  <span class="c-keyword">public void</span> <span class="c-func">solveProblem</span>(<span class="c-type">Problem</span> problem) {
+    <span class="c-comment">// 265+ LeetCode &amp; 120+ CodeChef solved</span>
+    <span class="c-type">Algorithm</span> optimal = <span class="c-keyword">new</span> <span class="c-type">Algorithm</span>(problem);
+    optimal.<span class="c-func">optimizeTimeComplexity</span>(<span class="c-string">"O(N log N)"</span>);
+    optimal.<span class="c-func">deploy</span>();
+  }
+}</code></pre>
+          </div>
+
+          <!-- Code Tab 2: TypeScript -->
+          <div class="code-body" id="tab-ts">
+            <pre><code><span class="c-keyword">export const</span> developer: <span class="c-type">DeveloperProfile</span> = {
+  name: <span class="c-string">'Rounak Raj'</span>,
+  institution: <span class="c-string">'Parul Institute of Technology'</span>,
+  stack: [<span class="c-string">'Java'</span>, <span class="c-string">'DSA'</span>, <span class="c-string">'React'</span>, <span class="c-string">'TypeScript'</span>, <span class="c-string">'SQL'</span>],
+  status: <span class="c-string">'Open for Internships'</span>,
+  craft: <span class="c-func">()</span> =&gt; {
+    <span class="c-keyword">return</span> <span class="c-string">'Building scalable digital solutions'</span>;
+  }
+};</code></pre>
+          </div>
+
+          <!-- Terminal Footer Status Bar -->
+          <div class="terminal-footer">
+            <div class="terminal-status">
+              <span class="status-indicator"></span>
+              <span>main*</span>
+            </div>
+            <div class="terminal-metrics">
+              <span>Java 21</span>
+              <span>•</span>
+              <span>UTF-8</span>
+              <span>•</span>
+              <span>Spaces: 2</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="skills section wrap" id="skills"><div class="section-label reveal"><span>03</span> Toolkit</div><div class="skills-layout"><h2 class="reveal">Always learning,<br>always <em>making.</em></h2><div class="skill-list reveal delay-1"><div><span>01</span><strong>Java</strong><p>Object-oriented programming &amp; problem solving · HackerRank Java 3★</p></div><div><span>02</span><strong>Data Structures &amp; Algorithms</strong><p>265 LeetCode, 120 CodeChef &amp; 61 GFG problems solved</p></div><div><span>03</span><strong>Competitive Programming</strong><p>LeetCode rating 1417 · CodeChef rating 1319</p></div><div><span>04</span><strong>Web Development</strong><p>HTML, CSS, JavaScript &amp; responsive design</p></div></div></div>
-      <div class="profiles reveal"><p>Explore my coding profiles</p><a href="https://leetcode.com/u/Rounak2802/" target="_blank" rel="noopener noreferrer" aria-label="Open Rounak Raj's LeetCode profile"><img class="profile-logo leetcode-logo" src="leetcode-icon.png" alt=""/> LeetCode <i>↗</i></a><a href="https://www.codechef.com/users/rounak2802" target="_blank" rel="noopener noreferrer" aria-label="Open Rounak Raj's CodeChef profile"><img class="profile-logo codechef-logo" src="codechef-icon.png" alt=""/> CodeChef <i>↗</i></a><a class="hackerrank-profile" href="https://www.hackerrank.com/profile/Rounak2802" target="_blank" rel="noopener noreferrer" aria-label="Open Rounak Raj's HackerRank profile"><span class="hackerrank-logo" aria-hidden="true">H</span><span>HackerRank <small>Java 3★</small></span><i>↗</i></a><a href="https://codolio.com/profile/Rounak2802" target="_blank" rel="noopener noreferrer" aria-label="Open Rounak Raj's Codolio profile"><span class="profile-icon">◌</span> Codolio <i>↗</i></a></div>
-    </section>
-
-    <section class="credentials section wrap" id="credentials">
-      <div class="section-label reveal"><span>04</span> Credentials</div>
-      <div class="credentials-heading">
-        <h2 class="reveal">Learning with<br><em>purpose.</em></h2>
-        <p class="reveal delay-1">A selection of certifications that reflect my continued focus on building strong technical foundations.</p>
+    <!-- ABOUT SECTION -->
+    <section class="section wrap" id="about">
+      <div class="section-header reveal">
+        <span class="section-tag">01 / Profile</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Dedicated to structured problem-solving, software engineering foundations, and clean code.</p>
       </div>
-      <article class="certificate-card reveal">
-        <div class="certificate-mark" aria-hidden="true"><span>IBM</span><i></i><b>Certified</b></div>
-        <div class="certificate-copy"><p class="project-number">01 / IBM</p><h3>IBM Certificate</h3><p>Professional certificate completed through IBM, demonstrating a commitment to expanding my technical knowledge.</p></div>
-        <div class="certificate-actions"><a class="button primary" href="Rounak_IBM_Certificate.pdf" target="_blank" rel="noopener noreferrer">View certificate <span>↗</span></a><a class="certificate-download" href="Rounak_IBM_Certificate.pdf" download>Download PDF <span>↓</span></a></div>
-      </article>
+
+      <div class="about-grid">
+        <!-- Main Bio Card -->
+        <div class="about-card bio-card spotlight-card reveal">
+          <div class="card-glow"></div>
+          <h3>Crafting software with logic, speed &amp; precision.</h3>
+          <p>
+            Currently pursuing my <strong>B.Tech in Computer Science and Engineering</strong> at <strong>Parul Institute of Technology</strong> (Vadodara, Gujarat), I combine deep theoretical foundations in Object-Oriented Programming and Data Structures with practical full-stack web engineering.
+          </p>
+          <p>
+            I actively practice competitive programming across platforms like LeetCode and CodeChef, refining my algorithmic intuition and writing optimized code with clean time and space complexity.
+          </p>
+
+          <div class="bio-highlights">
+            <div class="bio-pill">
+              <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Algorithms &amp; Optimization</span>
+            </div>
+            <div class="bio-pill">
+              <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Object-Oriented Design</span>
+            </div>
+            <div class="bio-pill">
+              <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Modern Frontend &amp; APIs</span>
+            </div>
+            <div class="bio-pill">
+              <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Relational Databases</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Quick Info Bento -->
+        <div class="about-sidebar">
+          <div class="info-card spotlight-card reveal delay-1">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div>
+              <h4>Academic Degree</h4>
+              <p>B.Tech in Computer Science</p>
+              <small>Parul Institute of Technology</small>
+            </div>
+          </div>
+
+          <div class="info-card spotlight-card reveal delay-1">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <p>Vadodara, Gujarat, India</p>
+              <small>Open to Remote &amp; On-Site Roles</small>
+            </div>
+          </div>
+
+          <div class="info-card spotlight-card reveal delay-1">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h4>Current Focus</h4>
+              <p>Advanced DSA &amp; Full-Stack Systems</p>
+              <small>Active Problem Solving</small>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="contact" id="contact"><div class="wrap contact-inner reveal"><p class="eyebrow"><i></i> Get in touch</p><h2>Have an idea?<br><em>Let's build it.</em></h2><a class="email-link" href="mailto:rounak00003@gmail.com">rounak00003@gmail.com <span>↗</span></a><div class="contact-bottom"><p>Vadodara, India · Open to SDE internships</p><a href="https://www.linkedin.com/in/rounak-raj-75b8b7328" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div></section>
+    <!-- SKILLS & TOOLKIT SECTION -->
+    <section class="section wrap" id="skills">
+      <div class="section-header reveal">
+        <span class="section-tag">02 / Capabilities</span>
+        <h2 class="section-title">Skills &amp; Technical Toolkit</h2>
+        <p class="section-subtitle">Core competencies and development tools I work with to build robust software.</p>
+      </div>
+
+      <div class="skills-bento">
+        <!-- Category 1: Programming Languages -->
+        <div class="skill-category-card spotlight-card reveal">
+          <div class="category-header">
+            <div class="category-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div>
+              <h3>Programming Languages</h3>
+              <p>Core syntax, paradigms &amp; logic</p>
+            </div>
+          </div>
+          <div class="skill-badges">
+            <div class="skill-badge highlight-badge">
+              <span class="badge-dot"></span>
+              <span class="badge-name">Java</span>
+              <span class="badge-sub">OOP / Core</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-dot"></span>
+              <span class="badge-name">C / C++</span>
+              <span class="badge-sub">Foundations</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-dot"></span>
+              <span class="badge-name">JavaScript (ES6+)</span>
+              <span class="badge-sub">Async / DOM</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-dot"></span>
+              <span class="badge-name">HTML5 &amp; CSS3</span>
+              <span class="badge-sub">Semantic</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-dot"></span>
+              <span class="badge-name">SQL</span>
+              <span class="badge-sub">Relational</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: DSA & Problem Solving -->
+        <div class="skill-category-card spotlight-card reveal">
+          <div class="category-header">
+            <div class="category-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            </div>
+            <div>
+              <h3>DSA &amp; Problem Solving</h3>
+              <p>Algorithmic optimization &amp; structures</p>
+            </div>
+          </div>
+          <div class="skill-badges">
+            <div class="skill-badge">
+              <span class="badge-name">Arrays &amp; Strings</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">Linked Lists &amp; Trees</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">Dynamic Programming</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">Recursion &amp; Backtracking</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">Graphs &amp; Traversal</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">Time &amp; Space Complexity Analysis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Web Development -->
+        <div class="skill-category-card spotlight-card reveal">
+          <div class="category-header">
+            <div class="category-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div>
+              <h3>Web Development</h3>
+              <p>Responsive, accessible user interfaces</p>
+            </div>
+          </div>
+          <div class="skill-badges">
+            <div class="skill-badge">
+              <span class="badge-name">React.js</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">TypeScript Basics</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">Responsive Design</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">RESTful APIs Integration</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">Modern CSS / Flexbox / Grid</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">DOM Manipulation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Tools & Databases -->
+        <div class="skill-category-card spotlight-card reveal">
+          <div class="category-header">
+            <div class="category-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div>
+              <h3>Databases &amp; Developer Tools</h3>
+              <p>Workflow, versioning &amp; storage</p>
+            </div>
+          </div>
+          <div class="skill-badges">
+            <div class="skill-badge">
+              <span class="badge-name">Git &amp; GitHub</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">MySQL / Relational DB</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">VS Code</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">IntelliJ IDEA</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">Linux / Bash CLI</span>
+            </div>
+            <div class="skill-badge">
+              <span class="badge-name">Vite &amp; NPM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coding Profiles Bento Strip -->
+      <div class="coding-profiles-strip reveal">
+        <h4 class="profiles-strip-title">Verified Coding Profiles</h4>
+        <div class="profiles-grid">
+          <a href="https://leetcode.com/u/Rounak2802/" target="_blank" rel="noopener noreferrer" class="profile-card spotlight-card" aria-label="LeetCode Profile">
+            <div class="profile-card-left">
+              <div class="platform-icon leetcode-bg">
+                <img src="leetcode-icon.png" alt="LeetCode" class="icon-img" onerror="this.innerHTML='LC'">
+              </div>
+              <div>
+                <h5>LeetCode</h5>
+                <span class="profile-stat">265+ Problems Solved</span>
+              </div>
+            </div>
+            <div class="profile-rating">
+              <span class="rating-label">Rating</span>
+              <span class="rating-val">1417</span>
+            </div>
+          </a>
+
+          <a href="https://www.codechef.com/users/rounak2802" target="_blank" rel="noopener noreferrer" class="profile-card spotlight-card" aria-label="CodeChef Profile">
+            <div class="profile-card-left">
+              <div class="platform-icon codechef-bg">
+                <img src="codechef-icon.png" alt="CodeChef" class="icon-img" onerror="this.innerHTML='CC'">
+              </div>
+              <div>
+                <h5>CodeChef</h5>
+                <span class="profile-stat">120+ Problems Solved</span>
+              </div>
+            </div>
+            <div class="profile-rating">
+              <span class="rating-label">Rating</span>
+              <span class="rating-val">1319</span>
+            </div>
+          </a>
+
+          <a href="https://www.hackerrank.com/profile/Rounak2802" target="_blank" rel="noopener noreferrer" class="profile-card spotlight-card" aria-label="HackerRank Profile">
+            <div class="profile-card-left">
+              <div class="platform-icon hackerrank-bg">
+                <span class="hr-letter">H</span>
+              </div>
+              <div>
+                <h5>HackerRank</h5>
+                <span class="profile-stat">Java Badge Verified</span>
+              </div>
+            </div>
+            <div class="profile-rating">
+              <span class="rating-label">Skill</span>
+              <span class="rating-val badge-star">Java 3★</span>
+            </div>
+          </a>
+
+          <a href="https://codolio.com/profile/Rounak2802" target="_blank" rel="noopener noreferrer" class="profile-card spotlight-card" aria-label="Codolio Profile">
+            <div class="profile-card-left">
+              <div class="platform-icon codolio-bg">
+                <span class="codolio-symbol">◎</span>
+              </div>
+              <div>
+                <h5>Codolio</h5>
+                <span class="profile-stat">Unified Dev Profile</span>
+              </div>
+            </div>
+            <div class="profile-rating">
+              <span class="rating-label">Activity</span>
+              <span class="rating-val">Active</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section class="section wrap" id="projects">
+      <div class="section-header reveal">
+        <span class="section-tag">03 / Portfolio Focus</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Real-world applications engineered for reliability, user experience, and clean code architecture.</p>
+      </div>
+
+      <div class="projects-container">
+        <!-- FEATURED PROJECT 1: InfraWatch AI -->
+        <article class="featured-project-card spotlight-card reveal">
+          <div class="project-preview-side">
+            <!-- Simulated Live Monitoring Dashboard UI -->
+            <div class="mock-browser">
+              <div class="mock-browser-header">
+                <div class="mock-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mock-address-bar">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  <span>infrawatch-ai.internal/analytics</span>
+                </div>
+                <div class="mock-badge">LIVE</div>
+              </div>
+
+              <div class="mock-browser-body">
+                <div class="mock-dash-top">
+                  <div>
+                    <span class="mock-label">AI INFRASTRUCTURE MONITOR</span>
+                    <h4 class="mock-heading">Cluster Health &amp; Telemetry</h4>
+                  </div>
+                  <div class="mock-status-pill">
+                    <span class="status-pulse-green"></span>
+                    <span>All 24 Nodes Normal</span>
+                  </div>
+                </div>
+
+                <div class="mock-metrics-row">
+                  <div class="mock-metric-tile">
+                    <span class="tile-title">CPU WORKLOAD</span>
+                    <div class="tile-val">42.4<small>%</small></div>
+                    <div class="tile-bar"><div class="bar-fill" style="width: 42%;"></div></div>
+                  </div>
+
+                  <div class="mock-metric-tile">
+                    <span class="tile-title">MEMORY USAGE</span>
+                    <div class="tile-val">68.1<small>%</small></div>
+                    <div class="tile-bar"><div class="bar-fill" style="width: 68%;"></div></div>
+                  </div>
+
+                  <div class="mock-metric-tile">
+                    <span class="tile-title">AVG LATENCY</span>
+                    <div class="tile-val">18<small>ms</small></div>
+                    <div class="tile-bar"><div class="bar-fill" style="width: 25%;"></div></div>
+                  </div>
+                </div>
+
+                <!-- AI Diagnostic Insight Notification Box -->
+                <div class="mock-ai-banner">
+                  <div class="ai-chip">AI</div>
+                  <div class="ai-text">
+                    <strong>Autonomous Anomaly Engine:</strong> System detected a momentary traffic surge on Gateway Cluster-02. Auto-balanced workload to standby nodes with zero packet drop.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-details-side">
+            <div class="project-meta-pill">
+              <span class="meta-tag">Featured Case Study</span>
+              <span class="meta-tag">Hackathon Project</span>
+            </div>
+
+            <h3 class="project-name">InfraWatch AI</h3>
+            <p class="project-summary">
+              An intelligent, real-time infrastructure telemetry and predictive health monitoring system. Detects performance degradation, latency anomalies, and hardware spikes before they cause outages.
+            </p>
+
+            <div class="project-features-list">
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" class="check-icon" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Automated anomaly detection using predictive heuristics</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" class="check-icon" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>High-density real-time metrics &amp; responsive dashboard UI</span>
+              </div>
+              <div class="feature-item">
+                <svg viewBox="0 0 24 24" class="check-icon" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Modular component architecture built with TypeScript &amp; Vite</span>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Vite</span>
+              <span class="tech-tag">TailwindCSS</span>
+              <span class="tech-tag">Telemetry API</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com/Rounak2804" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>Source Code</span>
+              </a>
+              <a href="https://github.com/Rounak2804" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <span>View Repository</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SECONDARY PROJECTS GRID -->
+        <div class="secondary-projects-grid">
+          <!-- Project 2: Algorithm Visualizer & Engine -->
+          <article class="project-sub-card spotlight-card reveal">
+            <div class="sub-card-top">
+              <div class="folder-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="sub-card-links">
+                <a href="https://github.com/Rounak2804" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h4 class="sub-project-title">DSA Problem Solver &amp; Algorithm Suite</h4>
+            <p class="sub-project-desc">
+              Comprehensive repository of optimized Java &amp; C++ solutions covering advanced Graph Algorithms, Dynamic Programming patterns, and Trees with benchmarked execution timings.
+            </p>
+            <div class="sub-project-tags">
+              <span>Java</span>
+              <span>DSA</span>
+              <span>C++</span>
+              <span>Algorithms</span>
+            </div>
+          </article>
+
+          <!-- Project 3: Modern Portfolio Platform -->
+          <article class="project-sub-card spotlight-card reveal delay-1">
+            <div class="sub-card-top">
+              <div class="folder-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <div class="sub-card-links">
+                <a href="https://github.com/Rounak2804/PORTFOLIO-WEBSITE" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h4 class="sub-project-title">Developer Portfolio Engine</h4>
+            <p class="sub-project-desc">
+              High-performance, accessible portfolio built with modern semantic HTML5, pure CSS design system, spotlight interactive cards, and zero runtime dependencies.
+            </p>
+            <div class="sub-project-tags">
+              <span>HTML5</span>
+              <span>Vanilla CSS</span>
+              <span>JavaScript</span>
+              <span>SEO</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS & STATS SECTION -->
+    <section class="section wrap" id="achievements">
+      <div class="section-header reveal">
+        <span class="section-tag">04 / Track Record</span>
+        <h2 class="section-title">Competitive Programming &amp; Stats</h2>
+        <p class="section-subtitle">Consistent problem-solving metrics and milestones across leading platforms.</p>
+      </div>
+
+      <div class="stats-bento">
+        <div class="stat-card spotlight-card reveal">
+          <div class="stat-icon-wrapper">
+            <span class="stat-badge-tag">LeetCode</span>
+          </div>
+          <div class="stat-number-wrapper">
+            <span class="counter" data-target="265">0</span><span class="plus-sign">+</span>
+          </div>
+          <p class="stat-label">LeetCode Problems Solved</p>
+          <div class="stat-footer-text">Contest Rating: <strong>1417</strong></div>
+        </div>
+
+        <div class="stat-card spotlight-card reveal delay-1">
+          <div class="stat-icon-wrapper">
+            <span class="stat-badge-tag">CodeChef</span>
+          </div>
+          <div class="stat-number-wrapper">
+            <span class="counter" data-target="120">0</span><span class="plus-sign">+</span>
+          </div>
+          <p class="stat-label">CodeChef Problems Solved</p>
+          <div class="stat-footer-text">Contest Rating: <strong>1319</strong></div>
+        </div>
+
+        <div class="stat-card spotlight-card reveal delay-2">
+          <div class="stat-icon-wrapper">
+            <span class="stat-badge-tag">GeeksforGeeks</span>
+          </div>
+          <div class="stat-number-wrapper">
+            <span class="counter" data-target="61">0</span><span class="plus-sign">+</span>
+          </div>
+          <p class="stat-label">GFG Practice Problems</p>
+          <div class="stat-footer-text">Fundamental CS &amp; Core DSA</div>
+        </div>
+
+        <div class="stat-card spotlight-card reveal delay-3">
+          <div class="stat-icon-wrapper">
+            <span class="stat-badge-tag">Consistency</span>
+          </div>
+          <div class="stat-number-wrapper">
+            <span class="counter" data-target="209">0</span><span class="plus-sign">+</span>
+          </div>
+          <p class="stat-label">Active Coding Days</p>
+          <div class="stat-footer-text">Daily streak &amp; regular submissions</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CREDENTIALS SECTION -->
+    <section class="section wrap" id="education">
+      <div class="section-header reveal">
+        <span class="section-tag">05 / Background</span>
+        <h2 class="section-title">Education &amp; Credentials</h2>
+        <p class="section-subtitle">Academic foundations and verified professional certifications.</p>
+      </div>
+
+      <div class="credentials-layout">
+        <!-- Education Card -->
+        <div class="edu-card spotlight-card reveal">
+          <div class="edu-header">
+            <div class="edu-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div>
+              <span class="edu-timeline">2023 &mdash; 2027 (Expected)</span>
+              <h3 class="edu-degree">Bachelor of Technology (B.Tech)</h3>
+              <h4 class="edu-institution">Parul Institute of Technology, Parul University</h4>
+            </div>
+          </div>
+          <div class="edu-body">
+            <p>Major in Computer Science &amp; Engineering. Core coursework focused on Software Engineering, Object-Oriented Programming (Java), Data Structures, Algorithms, Operating Systems, Database Management Systems (DBMS), and Computer Networks.</p>
+            <div class="edu-tags">
+              <span>Vadodara, Gujarat</span>
+              <span>Computer Science</span>
+              <span>Undergraduate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certification Card -->
+        <div class="cert-card spotlight-card reveal delay-1">
+          <div class="cert-header">
+            <div class="cert-logo-box">
+              <span class="cert-brand">IBM</span>
+              <span class="cert-verify-dot"></span>
+            </div>
+            <div class="cert-title-group">
+              <span class="cert-status">Verified Certificate</span>
+              <h3 class="cert-name">IBM Professional Technical Certification</h3>
+              <h4 class="cert-issuer">Issued by IBM</h4>
+            </div>
+          </div>
+
+          <p class="cert-desc">
+            Demonstrates proficiency in software development principles, core technologies, and professional technical practices.
+          </p>
+
+          <div class="cert-actions">
+            <a href="Rounak_IBM_Certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <span>View Certificate</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="Rounak_IBM_Certificate.pdf" download class="btn btn-secondary btn-sm">
+              <span>Download PDF</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & CTA SECTION -->
+    <section class="section wrap" id="contact">
+      <div class="contact-card spotlight-card reveal">
+        <div class="contact-glow" aria-hidden="true"></div>
+        
+        <div class="contact-content">
+          <div class="status-badge contact-status">
+            <span class="pulse-dot"></span>
+            <span>Looking for exciting opportunities</span>
+          </div>
+
+          <h2 class="contact-heading">
+            Let's build something <span class="gradient-text">together.</span>
+          </h2>
+
+          <p class="contact-subtext">
+            Whether you have an internship opportunity, a project to collaborate on, or simply want to chat about Java, algorithms, or web tech &mdash; my inbox is always open.
+          </p>
+
+          <!-- Interactive Email Box with Copy Feature -->
+          <div class="email-box-container">
+            <div class="email-box">
+              <svg viewBox="0 0 24 24" class="email-icon" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:rounak00003@gmail.com" class="email-text" id="email-address">rounak00003@gmail.com</a>
+              <button class="copy-btn" id="copy-email-btn" aria-label="Copy email address" title="Copy email">
+                <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span class="copy-label">Copy</span>
+              </button>
+            </div>
+            <div class="copy-toast" id="copy-toast">Email copied to clipboard!</div>
+          </div>
+
+          <div class="contact-links">
+            <a href="mailto:rounak00003@gmail.com" class="btn btn-primary">
+              <span>Send an Email</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/rounak-raj-75b8b7328" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/Rounak2804" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="wrap"><a class="brand" href="#home">RR<span>.</span></a><p>Designed &amp; built by Rounak Raj · 2026</p><a href="#home">Back to top ↑</a></footer>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <a href="#home" class="brand-logo footer-brand">
+          <span class="logo-symbol">&lt;/&gt;</span>
+          <span class="logo-text">Rounak<span>.dev</span></span>
+        </a>
+        <p class="footer-copy">&copy; 2026 Rounak Raj. Designed &amp; engineered with care.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="Rounak_Raj_Professional_Resume.pdf" download>Resume</a>
+      </div>
+
+      <div class="footer-right">
+        <a href="#home" class="back-to-top" aria-label="Back to top">
+          <span>Back to top</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
