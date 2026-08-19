@@ -66,26 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   trackedSections.forEach(section => sectionObserver.observe(section));
 
-  // 4. Interactive Hero Code Preview Tab Switcher
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const codeBodies = document.querySelectorAll('.code-body');
-
-  tabButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetTab = btn.getAttribute('data-tab');
-      
-      tabButtons.forEach(b => b.classList.remove('active'));
-      codeBodies.forEach(b => b.classList.remove('active'));
-
-      btn.classList.add('active');
-      const targetBody = document.getElementById(`tab-${targetTab}`);
-      if (targetBody) {
-        targetBody.classList.add('active');
-      }
-    });
-  });
-
-  // 5. Vercel-Style Spotlight Hover Effect for Cards
+  // 4. Vercel-Style Spotlight Hover Effect for Cards
   const spotlightCards = document.querySelectorAll('.spotlight-card');
   spotlightCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
@@ -97,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Scroll Reveal Observer
+  // 5. Scroll Reveal Observer
   const revealElements = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -110,47 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // 7. Stat Count-Up Animation
-  const counters = document.querySelectorAll('.counter');
-  let animatedCounters = false;
-
-  const animateCounters = () => {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      const duration = 1500; // ms
-      const stepTime = 20;
-      const totalSteps = duration / stepTime;
-      const increment = target / totalSteps;
-      let current = 0;
-
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          counter.textContent = target;
-          clearInterval(timer);
-        } else {
-          counter.textContent = Math.ceil(current);
-        }
-      }, stepTime);
-    });
-  };
-
-  const statsSection = document.getElementById('achievements');
-  if (statsSection) {
-    const statsObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !animatedCounters) {
-          animatedCounters = true;
-          animateCounters();
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    statsObserver.observe(statsSection);
-  }
-
-  // 8. Copy Email to Clipboard Feature
+  // 7. Copy Email to Clipboard Feature
   const copyBtn = document.getElementById('copy-email-btn');
   const copyToast = document.getElementById('copy-toast');
   const emailText = 'rounak00003@gmail.com';
@@ -162,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         copyToast.textContent = 'Email copied to clipboard!';
         copyToast.classList.add('show');
         copyBtn.querySelector('.copy-label').textContent = 'Copied!';
-        
+
         setTimeout(() => {
           copyToast.classList.remove('show');
           copyBtn.querySelector('.copy-label').textContent = 'Copy';
